@@ -1,0 +1,6 @@
+include LICENSE
+include README.rst
+recursive-include plugin_agenda/static *
+recursive-include plugin_agenda/templates *
+recursive-include plugin_agenda/migrations *
+recursive-include docs *
