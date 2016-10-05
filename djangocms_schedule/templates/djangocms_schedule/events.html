@@ -1,0 +1,22 @@
+{% load  sekizai_tags %}
+
+<ul>
+  {% for event in olist %}
+  <li>
+  <article >
+      <div>
+          <span class="dia">{{ event.start_date|date:"d" }}</span>
+          <span class="mes">{{ event.start_date|date:"F" }}</span>
+      </div>
+      <h1>
+      {% if event.show_detail %}
+          <a href="{{event.get_absolute_url}}">{{event.title}}</a>
+      {% else %}
+          {{event.title}}
+      {% endif %}
+      </h1>
+      <p class="hora">{{ event.hour }}</p>
+  </article>
+  </li>
+  {% endfor %}
+</ul>
